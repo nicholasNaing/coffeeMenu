@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+*{
+    font-family:'Agbalumo'
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    margin:0;
+}
+.landing-page {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed for the height of your landing page */
+    overflow-x: hidden;
+    margin:0
+}
+  
+.background-image {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100vw; /* Adjust the width to determine the image's coverage */
+    height: 100vh;
+    background-image: url('coffee.jpeg'); /* Replace with your image URL */
+    background-size:cover;
+    background-position: 0% 70%;
+    background-attachment:scroll;
+    z-index: 1; /* Place the image layer behind the gradient layer */
+}
+  
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* The remaining width of the landing page */
+    height: 100%;
+    background: linear-gradient(to right,
+    rgb(71, 40, 20),
+    rgb(71, 40, 20,0.7),
+    rgb(71, 40, 20,0.4),
+    rgb(71, 40, 20,0.1)); /* Adjust the gradient as needed */
+    z-index: 2; /* Place the gradient layer above the image layer */
+}
+.hero-text{
+    position: relative;
+    z-index: 3;
+    color: white;
+    top:25%;
+    left:5%;
+    width:calc(47%);
+    font-size: 33px;
+}
+.secondary-text{
+    margin:10px 0px;
+    font-size: 18px;
+}
+#orderButton{
+    position:relative;
+    width:calc(90%);
+    height:auto;
+    padding:10px 15px 13px 15px;
+    background-color: rgb(201, 138, 67);
+    border-radius: 40%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#orderButton:hover{
+    background-color: #37251b;
+    box-shadow: 5px 5px 25px rgb(201, 138, 67) inset;
+}
+/* .social-media{
+    position: absolute;
+    height: 100vh;
+    width:calc(4%);
+    z-index: 3;
+    background-color: #37251b;
+    border:#c49353 solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    row-gap: calc(4%);
+} */
+/* .social-media > a {
+    z-index: 4;
+    border: white solid 1px;
+    padding: 3px;
+    aspect-ratio: 1/1;
+} */
+nav{
+    position:fixed;
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #37251b;
+    color:white;
+    z-index: 4;
+    padding:5px 0px 9px 0px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:calc(40%);
+    font-size: 18px;
+}
+.nav-links > a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links > a:hover{
+    color:black
+}
+.shop-now{
+    width:calc(20%);
+    border: solid 1px rgb(201, 138, 67);
+    box-sizing: border-box;
+    padding:5px 10px 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+.shop-now:hover{
+    box-shadow: 3px 3px 15px rgb(201, 138, 67);
+}
+.nav-brand{
+    margin-left: 20px;
+}
+/* ============================================================================================================== */
+#overview{
+    position:relative;
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('coffeeBag.jpeg');
+    background-size:cover;
+    background-position: 0% 30%;
+    background-attachment: fixed;
+    align-items: center;
+    text-align: center;
+}
+img{
+    max-width:50%;
+    max-height:90%;
+    border-radius: 10%;
+    box-shadow: 5px 5px 25px rgb(168, 112, 75);
+}
+.mocha,.affogato,.latte{
+    position:relative;
+    width:100vw;
+    height:50vh;
+    color:white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    /* background-color: #80411e; */
+    border:0.5px solid white;
+    font-size: 23px;
+}
+.mocha > div,.affogato > div,.latte > div{
+    width:calc(40%);
+    word-wrap: calc(30%);
+    line-height: 2.2rem;
+}
+.latte{
+    border-bottom: none;
+}
+/* ============================================================================================================== */
+#benefits{
+    position:relative;
+    width:100%;
+    min-height: 100vh;
+    background-color: #c49353;
+    z-index: -2;
+}
+.bene-1,.bene-2,.bene-3{
+    width:100vw;
+    height:50vh;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 23px;
+    text-align: center;
+    word-wrap: break-word;
+    padding:5px 30px;
+    text-wrap: balance;
+    letter-spacing: 1px;
+}
+.bene-1{
+    color:rgb(255, 255, 255);
+}
+.bene-1::after{
+    content: '';
+    inset:0;
+    position:absolute;
+    background-color: #c49353;
+    background-attachment: fixed;
+    transform: skewY(-3deg);
+    z-index: -1;
+}
+.bene-1 > div,.bene-2 > div, .bene-3 > div {
+    width:calc(70%)
+}
+.bene-2{
+    color:#c49353;
+}
+.bene-2::after{
+    content: '';
+    inset:0;
+    position:absolute;
+    background-color: #37251b;
+    background-attachment: fixed;
+    transform: skewY(-3deg);
+    z-index: -1;
+}
+.bene-3{
+    color:#37251b;
+    z-index: 1;
+}
+.bene-3::after{
+    content: '';
+    inset:0;
+    position:absolute;
+    background-color: rgb(243, 239, 208);
+    background-attachment: fixed;
+    transform: skewY(-3deg);
+    z-index: -1;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+.dividing-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.dividing-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 84px;
+    transform: rotateY(180deg);
+}
+
+.dividing-wave .shape-fill {
+    fill: #37251b
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .dividing-wave svg {
+        width: calc(169% + 1.3px);
+        height: 110px;
+    }
+}
+
+.ending-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.ending-wave svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 200px;
+}
+
+.ending-wave .shape-fill {
+    fill: #37251b
+}
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .ending-wave svg {
+        width: calc(169% + 1.3px);
+        height: 110px;
+    }
+}
+/* ============================================================================================================== */
+/* #benefits::after{
+    content: '';
+    inset:0;
+    position:absolute;
+    background-image: url('coffee5.jpeg');
+    background-size:cover;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+    transform: skewY(-5deg);
+    z-index: -1;
+} */
+#contact_us{
+    position:relative;
+    width:100%;
+    height:80vh;
+    background-position: center;
+    background-color: #37251b;
+    text-align: center;
+}
+
+
+h2{
+    margin: 0;
+}
